@@ -8,4 +8,7 @@ $ g++ profiler.cpp -O3 -o profiler && ./profiler
 
 Для каждого дерева профайлер генерирует файл <название>.data, в который складывает время исполнения одного insert-а, find-а и erase-а в среднем в координатах (ln(n), avg time to do sth). В техминах ассимптотики это график (O(ln(n)), O(ln(n))).
 
+Красно-чёрное дерево:
 <img src="rb_insert.png">
+AVL дерево:
+<img src="avl_insert.png">
