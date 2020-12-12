@@ -63,7 +63,7 @@ void profile() {
 
 	testset<int> set_object_find();
 	for (int i = 0; i < DATA_POINTS; i++) {
-		set_object.insert(i);
+		set_object.insert((i * 239) % DATA_POINTS);
 		begin = clock();
 		set_object.find(i);
 		find_times[i] = clock() - begin + (i == 0 ? 0:find_times[i - 1]);

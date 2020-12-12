@@ -93,7 +93,11 @@ public:
         return (found.first == 0);
     }
     void erase(T val) {
-        
+        auto found = find_node_(val);
+        if (found.first == 1) {
+            return;
+        }
+        Node* todel = found.second;
     }
 private:
     unique_ptr<Node> root;
@@ -228,7 +232,7 @@ private:
         bool& getColor() {
             return colored;
         }
-    public:
+    private:
         T val_;
         Node *parent_;
         unique_ptr<Node> left_, right_;
